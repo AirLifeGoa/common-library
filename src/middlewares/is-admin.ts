@@ -7,6 +7,7 @@ export const isAdmin = (
     res: Response,
     next: NextFunction,
 ) => {
+    console.log(req.currentUser);
     if (!req.currentUser?.roles.admin) {
         throw new AuthorisationError('Not authorised');
     }
