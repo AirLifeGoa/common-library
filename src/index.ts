@@ -9,5 +9,5 @@ export * from './middlewares/error-handler';
 export * from './middlewares/require-auth';
 export * from './middlewares/validate-request';
 export * from './middlewares/has-role';
-
+export * from './middlewares/is-admin';
 export * from './services/generate-random-string';
