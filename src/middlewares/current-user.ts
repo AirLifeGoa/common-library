@@ -28,8 +28,10 @@ export const currentUser = (
   try {
     // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     req.currentUser = jwt.verify(req.session.jwt, process.env.JWT_KEY!) as UserPayload;
+    console.log(req.currentUser);
   } catch (err) {
     // do nothing
+    console.log(err);
   }
 
   next();
